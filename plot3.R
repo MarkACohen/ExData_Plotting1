@@ -11,7 +11,7 @@ sub <- subset(data, dateTime > strptime("2007/1/31 24:00:00", format = "%Y/%m/%d
 
 # create plot as png...
 png("plot3.png", width = 480, height = 480)
-plot(sub$dateTime, sub$Global_active_power, col="black", ylim=c(0,38), ylab = "Global Active Power (kilowatts)", xlab="",  main = "", type="n")
+plot(sub$dateTime, sub$Global_active_power, col="black", ylim=c(0,38), ylab = "Energy sub metering", xlab="",  main = "", type="n")
 lines(sub$dateTime, sub$Sub_metering_1, type="l", col="black")
 lines(sub$dateTime, sub$Sub_metering_2, type="l", col="red")
 lines(sub$dateTime, sub$Sub_metering_3, type="l", col="blue")
